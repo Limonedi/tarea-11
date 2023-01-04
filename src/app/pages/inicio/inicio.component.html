@@ -3,26 +3,28 @@
     <div class="">
         <form [formGroup]="formLogin" (submit)="send()">
     
-            <div class="">
+            <div class="form-group">
                 <label for="email">Email</label>
-                <input type="text" id="email" formControlName="email" class="" [(ngModel)]="correo">
+                <input type="text" id="email" formControlName="email" class="form-control" [(ngModel)]="correo">
             </div>
             
-            <div class="">
+            <div class="form-group">
                 <label for="pass">Contraseña</label>
-                <input type="password" id="password" formControlName="password" class="">
+                <input type="password" id="password" formControlName="password" class="form-control">
             </div>
             
-            <div class="">
-                <label for="pass">Terminos</label>
-                <input type="checkbox" id="term" formControlName="term">
+            <div class="form-check">
+                <label for="pass" class="form-check-label">
+                    <input type="checkbox" id="term" formControlName="term" class="form-check-input">
+                    Terminos
+                </label>
             </div>
 
-            <div class="">
-                <button [disabled]="formLogin.invalid">Send</button>
+            <div class="form-group">
+                <button [disabled]="formLogin.invalid" class="btn btn-primary">Enviar</button>
             </div>
-            <div>
-                <textarea name="" id="" cols="30" rows="10">Ingrese mensaje</textarea>
+            <div class="form-group">
+                <textarea name="" id="" cols="30" rows="10" class="form-control">Ingrese mensaje</textarea>
             </div>
         </form>
     </div>
