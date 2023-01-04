@@ -1,0 +1,36 @@
+<div class="form-control">
+
+    <div class="">
+        <form [formGroup]="formLogin" (submit)="send()">
+    
+            <div class="">
+                <label for="email">Email</label>
+                <input type="text" id="email" formControlName="email" class="" [(ngModel)]="correo">
+            </div>
+            
+            <div class="">
+                <label for="pass">Contraseña</label>
+                <input type="password" id="password" formControlName="password" class="">
+            </div>
+            
+            <div class="">
+                <label for="pass">Terminos</label>
+                <input type="checkbox" id="term" formControlName="term">
+            </div>
+
+            <div class="">
+                <button [disabled]="formLogin.invalid">Send</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="">
+        {{formLogin.valid}}
+    </div>
+
+
+    <div class="">
+        {{formLogin.value | json}}
+    </div>
+
+</div>
